@@ -11,9 +11,17 @@ import PackageDescription
 
 let package = Package(
     name: "BigIntTemp",
+    platforms: [
+        .macOS(.v10_13),
+        .iOS(.v12),
+        .tvOS(.v12),
+        .watchOS(.v4),
+        .macCatalyst(.v13),
+        .visionOS(.v1),
+    ],
     products: [
         .library(name: "BigIntTemp", targets: ["BigIntTemp"])
-    ],
+    ], 
     targets: [
         .target(name: "BigIntTemp", path: "Sources"),
         .testTarget(name: "BigIntTests", dependencies: ["BigIntTemp"], path: "Tests")
