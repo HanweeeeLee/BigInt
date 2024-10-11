@@ -10,7 +10,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "BigInt",
+    name: "BigIntTemp",
     platforms: [
         .macOS(.v10_13),
         .iOS(.v12),
@@ -20,10 +20,10 @@ let package = Package(
         .visionOS(.v1),
     ],
     products: [
-        .library(name: "BigInt", targets: ["BigInt"])
+        .library(name: "BigIntTemp", targets: ["BigIntTemp"])
     ], 
     targets: [
-        .target(name: "BigInt", path: "Sources"),
-        .testTarget(name: "BigIntTests", dependencies: ["BigInt"], path: "Tests")
+        .target(name: "BigIntTemp", path: "Sources"),
+        .testTarget(name: "BigIntTests", dependencies: ["BigIntTemp"], path: "Tests")
     ]
 )
